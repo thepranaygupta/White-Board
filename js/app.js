@@ -10,6 +10,13 @@ let draw_color = "black";
 let draw_width = "2";
 let is_drawing = false;
 
+let array = [];
+let index = -1;
+
+function change_color(element) {
+    draw_color = element.style.background;
+}
+
 // for mobile and tablet
 canvas.addEventListener("touchstart", start, false);
 canvas.addEventListener("touchmove", draw, false);
@@ -48,4 +55,28 @@ function stop(event) {
         is_drawing = false;
     }
     event.preventDefault();
+
+    if (event.type != 'mouseout') {
+        array.push(context.getImageData(0, 0, canvas.width, canvas.height))
+        index++;
+    }
+}
+
+function clear_canvas() {
+    context.fillStyle = "white";
+    context.clearRect(0, 0, canvas.width, canvas.height);
+    context.fillRect(0, 0, canvas.width, canvas.height);
+
+    array = [];
+    index = -1;
+}
+
+function undo() {
+    if(index <= 0) {
+        clear_canvas();
+    } else {
+        index -= 1;
+        array.pop();
+        context.putImageData(array[index], 0, 0);
+    }
 }
