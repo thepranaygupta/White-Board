@@ -1,0 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Poppins";
+  overflow: hidden;
+  background: #313131;
+}
