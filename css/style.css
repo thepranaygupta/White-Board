@@ -1,9 +1,55 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins");
 
-* {
+body {
   margin: 0px;
-  padding: 0px;
+  padding: 30px;
   font-family: "Poppins";
   overflow: hidden;
+  box-sizing: border-box;
   background: #313131;
+}
+
+canvas {
+    box-shadow: -3px 2px 9px 6px black;
+    cursor: pointer;
+}
+
+.tools {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.tools .color-field {
+  height: 40px;
+  width: 40px;
+  min-height: 40px;
+  min-width: 40px;
+  display: inline-block;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+  align-self: center;
+  margin: 0 10px;
+}
+
+.tools .button {
+  align-self: center;
+  width: 100px;
+  height: 40px;
+  border: 2px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+  background: #222;
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.color-picker, .pen-range {
+  cursor: pointer;
+  margin: 0 10px;
+  height: 50px;
+  border-radius: 8px;
 }
