@@ -72,7 +72,7 @@ function clear_canvas() {
 }
 
 function undo() {
-    if(index <= 0) {
+    if (index <= 0) {
         clear_canvas();
     } else {
         index -= 1;

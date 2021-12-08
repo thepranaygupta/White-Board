@@ -10,8 +10,8 @@ body {
 }
 
 canvas {
-    box-shadow: -3px 2px 9px 6px black;
-    cursor: pointer;
+  box-shadow: -3px 2px 9px 6px black;
+  cursor: pointer;
 }
 
 .tools {
@@ -47,9 +47,25 @@ canvas {
   margin: 0 10px;
 }
 
-.color-picker, .pen-range {
+.color-picker,
+.pen-range {
   cursor: pointer;
   margin: 0 10px;
   height: 50px;
   border-radius: 8px;
+}
+
+footer {
+  margin-top: 5%;
+  color: white;
+  text-align: center;
+}
+
+a {
+  color: rgb(163, 93, 255);
+  text-decoration: none;
+}
+
+.icon {
+  width: 15px;
 }
